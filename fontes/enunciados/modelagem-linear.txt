@@ -1,0 +1,65 @@
+2º SEMESTRE – GLOBAL SOLUTION:
+ORIENTAÇÕES GERAIS:
+- Esta avaliação vale 10,0 pontos;
+- Todos os integrantes do grupo são responsáveis pelo conteúdo da entrega final;
+- Colocar o nome completo e o número de matrícula de todos os integrantes;
+- Não envie links, poste todos os entregáveis diretamente no Portal, nos formatos exigidos;
+- Serão descontados 2,0 pontos em caso de cadastro ou entrega inadequados no sistema; 
+- Após o prazo de entrega, o sistema não aceitará envios posteriores;
+- O(s) arquivo(s) enviado(s) será(ão) o(s) avaliado(s), não sendo permitida substituição após o prazo;
+- Será descontado 1,0 ponto por item ausente e/ou não atendido na avaliação.
+
+TEMA: O desafio CitizenTech convida nossos alunos a olhar para problemas reais das cidades, do campo e das comunidades e desenvolver soluções tecnológicas capazes de melhorar concretamente a vida das pessoas.
+Estamos falando de mobilidade, acessibilidade, sustentabilidade, segurança, infraestrutura, conectividade, inclusão e tantas outras necessidades do nosso cotidiano.
+
+OBJETIVO: Neste desafio, os alunos deverão desenvolver um assistente digital introdutório que facilite o acesso de cidadãos a informações úteis do cotidiano, como serviços, documentos, direitos e orientações comunitárias. A solução deverá organizar um conjunto verificável de informações, receber perguntas ou escolhas do usuário e apresentar respostas claras, acompanhadas de referências e avisos sobre limitações. As equipes deverão aplicar programação, algoritmos, pensamento computacional, estruturas lógicas e recursos introdutórios de inteligência artificial, quando viáveis. O sistema deverá oferecer navegação simples, acessibilidade básica e tratamento de entradas inválidas, sem coletar dados pessoais desnecessários ou se apresentar como canal oficial. Espera-se um protótipo testável com usuários e indicadores de acerto das orientações, tempo para encontrar a informação e facilidade de utilização. 
+
+BRIEFING: A avaliação contemplará a coleta, organização e análise estatística de dados aplicados a problemas reais relacionados ao desafio CitizenTech, utilizando a linguagem de programação Python. Os alunos deverão aplicar conceitos de probabilidade, testes de hipóteses, análise bivariada e multivariada, regressão linear e logística, interpretando dados e transformando informações em inteligência acionável para o desenvolvimento de soluções tecnológicas inovadoras que contribuam para a melhoria da qualidade de vida da sociedade.
+
+ORIENTAÇÕES PARA O DESENVOLVIMENTO DA AVALIAÇÃO: Os alunos deverão se organizar individualmente, em dupla ou em trio para realizar a avaliação.
+
+01) Explore as bases de dados indicadas abaixo para fundamentar sua análise:
+IBGE: https://www.ibge.gov.br/ 
+Portal Brasileiro de Dados Abertos: https://dados.gov.br/home 
+Google Data Search: datasetsearch.research.google.com 
+Kaggle: https://www.kaggle.com/   
+GitHub: https://github.com/awesomedata/awesome-public-datasets 
+OBS: Outras bases de dados podem ser utilizadas, a base de dados poderá ser escolhida livremente pelo grupo, desde que seja adequada ao contexto e devidamente justificada, não sendo aceitas bases geradas artificialmente ou com dados fictícios.
+
+02) (1,0 ponto) Assumindo que as variáveis numéricas escolhidas seguem uma Distribuição Normal de Probabilidade, escolher uma variável aleatória da base de dados e determinar:
+a) A probabilidade desta variável ser menor do que a média dos registros da variável. Na sequência classifique o evento quanto ao resultado probabilístico.  
+b) A probabilidade desta variável ser maior que a mediana dos registros da variável. Na sequência classifique o evento quanto ao resultado probabilístico.  
+
+03) (1,0 ponto) Assumindo que as variáveis numéricas escolhidas seguem uma Distribuição Normal de Probabilidade, escolher uma variável aleatória da base de dados e realizar um teste de hipótese para a média utilizando como dados do problema:
+a) A média amostral é menor do que a média populacional de referência, a um nível de significância de 6%, amostra de tamanho 20 e desvio padrão de referência igual ao desvio padrão populacional dos dados. 
+b) A média amostral é maior do que a média populacional de referência, a um nível de significância de 9%, amostra de tamanho 25 e desvio padrão de referência igual ao desvio padrão populacional dos dados.
+
+04) (2,0 pontos) Faça uma Análise Bivariada entre 02 variáveis quantitativas contendo:
+a) O Gráfico de Dispersão, com título e nomes nos eixos x e y, e interprete o resultado.
+b) A Covariância e a Correlação Linear de Pearson, e interprete os resultados. 
+c) O Gráfico de Correlação Linear de Pearson, e interprete o resultado.
+d) A reta da Regressão Linear Simples (no Gráfico de Dispersão), e a Equação da Regressão Linear Simples.
+e) A verificação da adequação do modelo (R² e Teste F), e interprete os resultados.
+f) Faça uma previsão.
+
+05) (2,0 pontos) Faça uma Análise Multivariada entre, pelo menos, 03 variáveis quantitativas contendo:
+a) O Gráfico de Dispersão, e interprete os principais resultados.
+b) A Matriz de Covariância e a Matriz de Correlação Linear de Pearson, e interprete os principais resultados. 
+c) O Gráfico de Correlação Linear de Pearson, e interprete os principais resultados.
+d) A Equação da Regressão Linear Múltipla.
+e) A verificação da adequação do modelo (R² e Teste F), e interprete os resultados.
+f) Faça uma previsão utilizando, pelo menos, 02 variáveis explicativas.
+
+06) (2,0 pontos) Faça uma Análise Multivariada entre, pelo menos, 03 variáveis quantitativas contendo:  
+a) A Equação da Regressão Logística Binária.
+b) A Matriz de Confusão e a Acurácia, interprete os resultados.
+c) Uma classificação utilizando, pelo menos, 02 variáveis explicativas.
+
+07) (2,0 pontos) Elabore um relatório estatístico, contendo as tabelas, gráficos e medidas estatísticas obtidas, com suas respectivas interpretações, com o objetivo de extrair insights relevantes que auxiliem na resolução do problema‑tema desta avaliação.
+Assuma que este relatório será apresentado a uma empresa ou cliente que, além de utilizar as informações para apoiar a tomada de decisão, também avaliará seu desempenho e rigor como profissional da área técnica. 
+
+08) Em seguida, apenas um representante de cada grupo deverá postar no Portal:
+a) O arquivo com a base de dados, obrigatoriamente em formato .csv (Comma-Separated Values) ou .xlsx (Excel);
+b) Os códigos desenvolvidos, obrigatoriamente em formato .py (Python);
+c) O relatório estatístico, obrigatoriamente em formato .pdf (PDF).
+OBS: As entregas devem ser realizadas estritamente conforme as orientações e formatos definidos e trabalhados em aula pelo(a) respectivo(a) professor(a) da disciplina durante o semestre.

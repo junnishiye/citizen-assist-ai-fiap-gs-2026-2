@@ -11,6 +11,6 @@ Repositório do grupo para organizar os materiais e entregas por matéria. Cada 
 - [Soluções em Energias Renováveis e Sustentáveis (SERS)](disciplinas/sers.md)
 - [Computer Organization and Architecture (COA)](disciplinas/coa.md)
 - [Modelagem Matemática e Computacional](disciplinas/modelagem-matematica.md)
-- [Computer Science](disciplinas/computer-science.md) — aguardando enunciado.
+- [Computer Science](disciplinas/computer-science.md)
 
 As fichas Aurora em `fontes/aurora/` são fictícias e pertencem à atividade de Prompt e IA. O texto de Modelagem Linear recebido está em `fontes/enunciados/`. Preencher nomes/RMs do grupo e acrescentar os arquivos de cada entrega conforme forem concluídos.

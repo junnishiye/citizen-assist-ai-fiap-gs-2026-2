@@ -1,10 +1,10 @@
 # Entregas — Global Solution 2026.2
 
-Repositório do grupo para organizar os materiais e entregas por matéria. Cada arquivo traz os requisitos e o checklist correspondente.
+Repositório do grupo para organizar os materiais e entregas por matéria. Os links levam aos materiais de cada matéria.
 
 ## Matérias
 
-- [Pensamento Computacional e Automação com Python (PCP)](disciplinas/pcp.md)
+- [Pensamento Computacional e Automação com Python (PCP)](disciplinas/pcp/)
 - [Data Structures and Algorithms (DSA)](disciplinas/dsa.md)
 - [Prompt and Artificial Intelligence](disciplinas/prompt-ia.md)
 - [Modelagem Linear para Aprendizado de Máquina](disciplinas/modelagem-linear.md)

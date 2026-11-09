@@ -1,0 +1,35 @@
+[
+  {
+    "data": "2026-11-09T20:00:24-03:00",
+    "origem": "categoria",
+    "tentativas": 1,
+    "pergunta": "",
+    "id_orientacao": 3,
+    "encontrou": true,
+    "tempo_encontro_segundos": 0.0,
+    "ajudou": null,
+    "tempo_segundos": 2.5
+  },
+  {
+    "data": "2026-11-09T20:00:33-03:00",
+    "origem": "categoria",
+    "tentativas": 1,
+    "pergunta": "",
+    "id_orientacao": 1,
+    "encontrou": true,
+    "tempo_encontro_segundos": 0.0,
+    "ajudou": null,
+    "tempo_segundos": 4.2
+  },
+  {
+    "data": "2026-11-09T20:00:37-03:00",
+    "origem": "pergunta",
+    "tentativas": 3,
+    "pergunta": "aposentadoria",
+    "id_orientacao": 7,
+    "encontrou": true,
+    "tempo_encontro_segundos": 9.6,
+    "ajudou": null,
+    "tempo_segundos": 14.2
+  }
+]

@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "categoria": "Documentos",
+    "titulo": "Solicitar a Carteira de Identidade Nacional (CIN)",
+    "palavras_chave": [
+      "cin",
+      "identidade",
+      "carteira de identidade",
+      "novo rg",
+      "emitir identidade"
+    ],
+    "resposta": "1. Abra a página oficial indicada em fonte.\n2. Procure o estado onde deseja atendimento ou o Distrito Federal e acesse o canal do órgão de identificação.\n3. Confira os documentos e as regras locais antes de agendar.\n4. Compareça ao atendimento conforme as instruções do órgão.\nA emissão é organizada pelos estados e pelo Distrito Federal. Não existe um único agendamento para todo o Brasil. Se não encontrar um link na lista, consulte o portal oficial do seu estado.",
+    "documentos": [
+      "Certidão de nascimento ou casamento",
+      "Outros documentos que o órgão de identificação indicar para o seu caso"
+    ],
+    "onde": "Instituto de Identificação do estado ou do Distrito Federal; canais indicados na página oficial.",
+    "fonte": "https://www.gov.br/governodigital/pt-br/identidade/cin/duvidas-frequentes-sobre-a-cin-campanha",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 2,
+    "categoria": "Documentos",
+    "titulo": "Obter comprovante de inscrição no CPF",
+    "palavras_chave": [
+      "cpf",
+      "comprovante de cpf",
+      "cartao de cpf",
+      "segunda via do cpf",
+      "imprimir cpf"
+    ],
+    "resposta": "1. Abra a página oficial indicada em fonte.\n2. Escolha o canal de emissão do comprovante adequado ao seu caso.\n3. Preencha os dados somente no sistema oficial da Receita Federal.\n4. Salve ou imprima o comprovante.\nEste serviço é para quem já possui CPF. Se não souber o número, procure o atendimento da Receita Federal pelos canais da página. O cartão plástico não é mais emitido. Não envie CPF, senha ou documentos ao assistente.",
+    "documentos": [
+      "Documento oficial de identificação com foto, conforme o canal de atendimento",
+      "Documentação de representação, quando outra pessoa fizer a solicitação"
+    ],
+    "onde": "Receita Federal, pelo canal de emissão ou atendimento disponível na página do serviço.",
+    "fonte": "https://www.gov.br/pt-br/servicos/obter-cartao-de-cpf",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 3,
+    "categoria": "Saúde",
+    "titulo": "Acessar o Meu SUS Digital",
+    "palavras_chave": [
+      "meu sus digital",
+      "entrar no sus",
+      "acessar sus",
+      "conecte sus",
+      "aplicativo sus"
+    ],
+    "resposta": "1. Acesse https://meususdigital.saude.gov.br ou o aplicativo oficial Meu SUS Digital.\n2. Entre com a sua conta gov.br somente nesse canal oficial.\n3. Consulte as informações de saúde disponíveis na sua conta.\nA plataforma reúne informações enviadas pelos serviços de saúde. A ausência de um registro na tela não significa que o atendimento não ocorreu. Não informe senha, CPF ou informações de saúde ao assistente.",
+    "documentos": [
+      "CPF para identificar a conta gov.br, informado apenas no canal oficial; não é necessário enviar documento ao assistente"
+    ],
+    "onde": "Site https://meususdigital.saude.gov.br ou aplicativo oficial Meu SUS Digital.",
+    "fonte": "https://www.gov.br/saude/pt-br/composicao/seidigi/meususdigital",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 4,
+    "categoria": "Saúde",
+    "titulo": "Consultar vacinas no Meu SUS Digital",
+    "palavras_chave": [
+      "vacinas",
+      "vacinacao",
+      "carteira de vacinacao",
+      "historico de vacinas",
+      "historico das minhas doses",
+      "comprovante de vacina"
+    ],
+    "resposta": "1. Abra o Meu SUS Digital e entre com a conta gov.br.\n2. Acesse Minha Saúde e depois Vacinas.\n3. Consulte as doses registradas. Na aba Documentos, veja a carteira digital e os certificados disponíveis.\n4. Se faltar uma dose ou houver erro, procure a unidade onde a vacina foi aplicada ou a Secretaria de Saúde do seu município.\nOs registros dependem do envio das informações pelos serviços de saúde. Não envie dados de saúde ao assistente.",
+    "documentos": [
+      "CPF para acesso à conta gov.br no canal oficial"
+    ],
+    "onde": "Meu SUS Digital: https://meususdigital.saude.gov.br. Para verificar registros ausentes: unidade de vacinação ou Secretaria Municipal de Saúde.",
+    "fonte": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/outubro/quer-consultar-suas-vacinas-saiba-como-acessar-a-carteira-de-vacinacao-pelo-meu-sus-digital/",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 5,
+    "categoria": "Transporte",
+    "titulo": "Emitir a Carteira da Pessoa Idosa para viagens entre estados",
+    "palavras_chave": [
+      "carteira da pessoa idosa",
+      "carteira do idoso",
+      "viagem interestadual",
+      "passagem interestadual",
+      "transporte interestadual"
+    ],
+    "resposta": "A Carteira da Pessoa Idosa está relacionada ao transporte interestadual. O serviço é destinado a pessoas com 60 anos ou mais, renda individual de até dois salários mínimos e Cadastro Único atualizado.\n1. Abra https://carteiraidoso.cidadania.gov.br.\n2. Entre com a conta gov.br e siga a opção de emissão.\n3. Se precisar de ajuda, procure o CRAS do seu município.\nConfira no canal oficial as condições para usar o benefício na viagem. Esta orientação não trata do cartão de ônibus municipal.",
+    "documentos": [
+      "NIS, número gerado pelo Cadastro Único; apresente apenas no canal oficial quando solicitado"
+    ],
+    "onde": "Site https://carteiraidoso.cidadania.gov.br ou CRAS do município.",
+    "fonte": "https://www.gov.br/pt-br/servicos/adquirir-carteira-do-idoso",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 6,
+    "categoria": "Transporte",
+    "titulo": "Emitir credencial digital de estacionamento para pessoa idosa",
+    "palavras_chave": [
+      "credencial de estacionamento",
+      "vaga de idoso",
+      "estacionamento",
+      "cartao de estacionamento",
+      "credencial do idoso"
+    ],
+    "resposta": "1. Confira os requisitos na página oficial indicada em fonte. O canal digital descrito exige CNH válida e atendimento aos critérios da Senatran.\n2. No aplicativo Carteira Digital de Trânsito, entre na sua conta e escolha Condutor, Credencial de Estacionamento e Credencial de idoso.\n3. Selecione Emitir credencial e siga as instruções de uso.\nTambém existe emissão pelo Portal de Serviços Senatran. Se não tiver CNH válida ou não conseguir usar o canal digital, consulte o órgão de trânsito do seu município sobre o atendimento adequado ao seu caso.",
+    "documentos": [
+      "CPF, informado somente no canal oficial",
+      "CNH válida, requisito do canal digital descrito pela Senatran"
+    ],
+    "onde": "Aplicativo Carteira Digital de Trânsito ou Portal de Serviços Senatran: https://portalservicos.senatran.serpro.gov.br.",
+    "fonte": "https://www.gov.br/pt-br/servicos/emitir-credencial-de-estacionamento-digital",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 7,
+    "categoria": "Aposentadoria",
+    "titulo": "Solicitar aposentadoria por idade urbana no INSS",
+    "palavras_chave": [
+      "aposentadoria",
+      "aposentar",
+      "idade urbana",
+      "pedir aposentadoria",
+      "solicitar aposentadoria"
+    ],
+    "resposta": "1. Consulte os requisitos no serviço oficial. Ter direito ao benefício depende das regras aplicáveis e da análise do INSS.\n2. Entre em https://meu.inss.gov.br com a conta gov.br.\n3. No campo de busca, procure Aposentadoria por idade urbana.\n4. Selecione o serviço e siga as instruções para enviar o pedido.\n5. Acompanhe em Consultar Pedidos.\nSe o sistema estiver indisponível, ligue 135. Esta orientação não calcula o direito à aposentadoria. Informe dados pessoais apenas nos canais oficiais.",
+    "documentos": [
+      "Identificação do titular: RG, CIN, CNH ou CTPS",
+      "CPF do titular",
+      "Se houver representante: identificação, CPF e procuração ou termo de representação aplicável"
+    ],
+    "onde": "Site https://meu.inss.gov.br, aplicativo Meu INSS ou telefone 135 para orientação.",
+    "fonte": "https://www.gov.br/pt-br/servicos/solicitar-aposentadoria-por-idade-trabalhador-urbano",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 8,
+    "categoria": "Aposentadoria",
+    "titulo": "Consultar extrato de pagamento de benefício do INSS",
+    "palavras_chave": [
+      "extrato",
+      "pagamento do inss",
+      "contracheque",
+      "holerite",
+      "extrato de pagamento"
+    ],
+    "resposta": "1. Entre em https://meu.inss.gov.br com a conta gov.br.\n2. Na busca, digite Extrato de pagamento.\n3. Selecione o serviço e siga as instruções para visualizar ou baixar o documento.\nO extrato mostra informações sobre o pagamento do benefício, como valor, data e banco. É destinado a quem já recebe benefício do INSS. Se o sistema estiver indisponível ou precisar de orientação, ligue 135. Não envie o extrato ou seus dados bancários ao assistente.",
+    "documentos": [
+      "CPF para acesso ao canal oficial",
+      "Para atendimento quando solicitado: identificação do titular e documentação do representante, se houver"
+    ],
+    "onde": "Site https://meu.inss.gov.br, aplicativo Meu INSS ou telefone 135.",
+    "fonte": "https://www.gov.br/pt-br/servicos/emitir-extrato-de-pagamento-de-beneficio",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 9,
+    "categoria": "Benefícios sociais",
+    "titulo": "Fazer ou atualizar o Cadastro Único",
+    "palavras_chave": [
+      "cadastro unico",
+      "cadunico",
+      "cras",
+      "atualizar cadastro",
+      "inscricao no cadastro unico"
+    ],
+    "resposta": "1. Procure o posto do Cadastro Único ou o CRAS do seu município para saber onde e como será o atendimento.\n2. Separe os documentos da família e siga as orientações do posto.\n3. Atualize o cadastro a cada 24 meses ou sempre que houver mudanças na família, endereço ou renda. Atenda também às convocações recebidas.\nO cadastro é gratuito. Para quem mora sozinho, determinados benefícios exigem, em regra, entrevista no domicílio; confirme o procedimento com o município. A inscrição não garante a concessão de um benefício.",
+    "documentos": [
+      "CPF de todas as pessoas da família",
+      "Documento de identificação",
+      "Comprovante de residência, se houver"
+    ],
+    "onde": "Posto do Cadastro Único ou CRAS do município de residência. Confirme local e procedimento com a prefeitura.",
+    "fonte": "https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico/Cadastro-unico/",
+    "verificado_em": "2026-11-06"
+  },
+  {
+    "id": 10,
+    "categoria": "Benefícios sociais",
+    "titulo": "Solicitar BPC para pessoa idosa",
+    "palavras_chave": [
+      "bpc",
+      "loas",
+      "beneficio assistencial",
+      "bpc idoso",
+      "beneficio de prestacao continuada"
+    ],
+    "resposta": "O BPC para pessoa idosa atende pessoas de 65 anos ou mais que cumpram os requisitos do benefício. Não exige contribuição anterior ao INSS.\n1. Confira no canal oficial os requisitos atuais, incluindo renda, Cadastro Único e exigências de identificação.\n2. Entre em https://meu.inss.gov.br com a conta gov.br.\n3. Procure Benefício assistencial ao idoso e siga as instruções.\n4. Acompanhe em Consultar Pedidos. Se o sistema estiver indisponível, ligue 135.\nMantenha o Cadastro Único atualizado. A aprovação depende da análise do INSS; o assistente não confirma elegibilidade.",
+    "documentos": [
+      "Identificação e CPF do titular e das pessoas da família que moram na mesma casa",
+      "Se houver representante: identificação, CPF e procuração ou termo de representação aplicável",
+      "Confira no atendimento oficial as exigências atuais de cadastro biométrico e as possíveis dispensas"
+    ],
+    "onde": "Site https://meu.inss.gov.br ou aplicativo Meu INSS. Para orientação: 135; para Cadastro Único: posto municipal.",
+    "fonte": "https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-ao-idoso",
+    "verificado_em": "2026-11-06"
+  }
+]
+

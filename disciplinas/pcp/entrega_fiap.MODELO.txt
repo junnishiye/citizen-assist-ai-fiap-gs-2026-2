@@ -4,5 +4,5 @@ Integrantes e RM:
 - João Vitor Jun Nishiye de Sousa — RM 572079
 - Davi Sinhorini Pacheco — RM 569487
 - Gustavo Gamba Zancopé — RM 569287
-Link do repositório GitHub: https://github.com/junnishiye/citizen-assist-ai-fiap-gs-2026-2
+Link do repositório GitHub: https://github.com/junnishiye/citizen-assist-ai-fiap-gs-2026-2/tree/main/disciplinas/pcp
 Link do vídeo técnico no YouTube: [preencher com o link do vídeo não listado]

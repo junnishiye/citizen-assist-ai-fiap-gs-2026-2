@@ -104,10 +104,3 @@ O campo `fonte` do JSON guarda o endereço de cada serviço. A data registrada n
 | 9 | [Cadastro Único](https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico/Cadastro-unico/) |
 | 10 | [BPC para pessoa idosa](https://www.gov.br/pt-br/servicos/solicitar-beneficio-assistencial-ao-idoso) |
 
-## Vídeo técnico e envio
-
-O [roteiro de 7 min 20 s](docs/ROTEIRO_VIDEO.md) divide as partes técnicas entre os três integrantes e mostra como demonstrar o antes e o depois da correção em uma cópia do projeto.
-
-**Vídeo técnico no YouTube** · [inserir o link após publicar como não listado]
-
-Publique o código em um repositório público e confira o acesso aos dois links em janela anônima. Preencha os links em [entrega_fiap.MODELO.txt](entrega_fiap.MODELO.txt). O enunciado pede somente o TXT no Portal FIAP, em **Entregas de Trabalho**, até **19/11 às 23h59**.

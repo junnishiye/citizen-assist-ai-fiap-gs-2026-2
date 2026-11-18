@@ -1,0 +1,183 @@
+{
+  "aviso": "Cada valor tem unidade, fonte, data de consulta e flag de estimativa. valor null = PENDENTE: o codigo se recusa a rodar. 'provisorio': true = trocar pela fonte oficial antes da entrega.",
+  "valores": {
+    "tarifa_rs_kwh": {
+      "valor": 0.78938,
+      "unidade": "R$/kWh, tarifa convencional B1 Residencial vigente, SEM tributos (TUSD + TE; sem ICMS, PIS e Cofins)",
+      "fonte": "ANEEL, Resolucao Homologatoria 3.596/2026 (30/06/2026), reajuste anual da Enel SP; arquivo REH_3596.2026_Enel_SP.pdf fornecido pelo grupo (SEI 48500.030915/2025-00). Tabela 2, B1 Residencial, modalidade Convencional, tarifas de aplicacao: TUSD R$ 472,42/MWh + TE R$ 316,96/MWh = R$ 789,38/MWh = R$ 0,78938/kWh. Vigencia de 04/07/2026 a 03/07/2027 (art. 3)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Fonte primaria; confirma o R$ 0,789 do site Calculadora de Energia. Sem ICMS e PIS/Cofins (a Tabela 2 nao tem coluna de tributos; tarifas homologadas pela ANEEL nao os incluem). Sem bandeira: o art. 3, par. 3 manda somar a TE o adicional da bandeira amarela ou vermelha, em valor fixado pela ANEEL em ato especifico. Conferido na fatura real da Enel SP (out/2026): tarifa unitaria TUSD 0,47242 + TE 0,31696 = 0,78938 R$/kWh, sem tributos."
+    },
+    "tarifa_baixa_renda_rs_kwh": {
+      "valor": 0.61191,
+      "unidade": "R$/kWh, B1 Baixa Renda (Tarifa Social), SEM tributos, para a parcela do consumo acima da franquia gratuita",
+      "fonte": "ANEEL, REH 3.596/2026, Tabela 2, B1 Convencional, subclasse BAIXA RENDA (1): TUSD R$ 306,31/MWh + TE R$ 305,60/MWh = R$ 611,91/MWh = R$ 0,61191/kWh. Tabela 3: desconto de 100% ate 80 kWh e 0% acima",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "INTERPRETACAO NAO CONFIRMADA: a nota (1) da Tabela 2 diz que esta e a tarifa de referencia para os descontos da Tabela 3; assumi que a parcela acima de 80 kWh e cobrada por ela, e nao pela tarifa Residencial (22% maior). A pagina da ANEEL sobre a Tarifa Social (https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social) diz que a parcela acima de 80 kWh nao recebe desconto, mas nao diz qual tarifa se aplica a ela. Diz tambem que familias beneficiarias nao pagam CDE nem Proinfa, o que e coerente (inferencia, nao confirmada) com a tarifa Baixa Renda ser menor que a Residencial. O modelo de fatura do grupo diz 'tarifa integral' sem informar o valor. Indicio adicional: a pagina de tarifas da Enel SP (https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-de-energia-eletrica.html, captura de tela do grupo em 11/11/2026) repete os valores da REH 3.596/2026 e traz a tabela ANTIGA da Tarifa Social por faixa (ate 30 kWh: 65% de desconto; 31 a 100: 40%; 101 a 220: 10%), cuja faixa acima de 220 kWh, sem desconto, e cobrada exatamente pela tarifa Baixa Renda cheia (306,31 + 305,60). Isso sugere, por analogia, que a parcela sem desconto continua na tarifa Baixa Renda e nao na Residencial, mas nao prova a regra nova. ATENCAO: o TEXTO dessa pagina da Enel ('desconto aos primeiros 220 kWh') esta desatualizado frente a REH 3.596/2026, Tabela 3 (100% ate 80 kWh, 0% acima) e a pagina da ANEEL; nao citar a Enel para a regra da Tarifa Social. Confirmar com uma fatura real de familia da Tarifa Social. A subclasse Desconto Social (<= 120 kWh a R$ 633,66/MWh, acima disso tarifa Residencial) nao e modelada. Reforco (14/11/2026): a pagina de tarifas da Enel SP (REH 3.596/2026) ainda lista a subclasse Baixa Renda por faixas do regime antigo, e todas partem de TUSD 306,31 + TE 305,60 (= 0,61191 R$/kWh): 107,21 = 306,31 x 0,35 (65% de desconto), 183,79 = x 0,60, 275,68 = x 0,90, e acima de 220 kWh 306,31 (0% de desconto). Ou seja, com 0% de desconto a Enel cobra a propria tarifa Baixa Renda; por analogia o excedente acima de 80 kWh no regime novo (Tabela 3 da REH: 0% acima de 80 kWh) usa 0,61191. Inferencia por analogia, ainda nao vista em fatura do regime novo. A mesma pagina ainda traz texto desatualizado ('primeiros 220 kWh'). Reforco 14/11/2026 (Dados Abertos ANEEL, Componentes Tarifarias, ELETROPAULO, REH 3.596/2026, base Tarifa de Aplicacao, B1 Convencional): as linhas 'Residencial Tarifa Social - faixa 01' e 'faixa 02' trazem TUSD 306,31 + TE 305,60 = 611,91 R$/MWh, igual a este parametro. Se a faixa 02 for a parcela acima de 80 kWh (rotulo inferido, nao explicado no arquivo), o excedente usa 0,61191. A linha generica 'Baixa Renda' do mesmo arquivo traz TE 316,78 (TUSD 306,31), diferente; nao usei essa linha. Atualizacao 14/11/2026, Dados Abertos da ANEEL (Tarifas de Aplicacao, ELETROPAULO, resource_id e8717aa8-2521-453f-bf16-fbb9a16eea39, vigencia 04/07/2026 a 03/07/2027): as subclasses de FATURAMENTO 'Residencial Tarifa Social - faixa 01' (ate 80 kWh) e 'faixa 02' (acima de 80 kWh) tem os MESMOS componentes, TUSD 306,31 + TE 305,60 = 611,91 R$/MWh, batendo exatamente com este parametro; a Tabela 3 da REH (100% de desconto na faixa 01, 0% na faixa 02) e aplicada sobre essa mesma tarifa. Isso confirma, por uma segunda fonte oficial independente da leitura da REH em PDF, que o excedente acima de 80 kWh e cobrado pela tarifa Baixa Renda, e nao pela Residencial. Ainda nao visto em fatura real de Tarifa Social. ATENCAO (divergencia de dado, nao usada): o mesmo arquivo tem uma subclasse GENERICA chamada so 'Baixa Renda' com TUSD 306,31 mas TE 316,78 (igual ao TE do Desconto Social, nao 305,60); essa subclasse nao e usada por este modulo, que se baseia nas subclasses 'Tarifa Social - faixa 01/02' citadas acima."
+    },
+    "tarifa_desconto_social_rs_kwh": {
+      "valor": 0.63366,
+      "unidade": "R$/kWh, B1 Residencial subclasse DESCONTO SOCIAL, SEM tributos, para consumo ate 120 kWh/mes",
+      "fonte": "ANEEL, REH 3.596/2026, Tabela 2, B1 Convencional, subclasse DESCONTO SOCIAL (2): TUSD R$ 316,88/MWh + TE R$ 316,78/MWh = R$ 633,66/MWh = R$ 0,63366/kWh. Nota (2) da tabela: tarifa para a faixa ate 120 kWh; acima de 120 kWh aplica-se a tarifa da subclasse Residencial. Pagina da Enel SP https://www.enel.com.br/pt-saopaulo/Para_Voce/Tarifa_Social_Baixa_Renda.html (capturas de tela do grupo, 11/11/2026): beneficio para familias do CadUnico com renda per capita acima de 1/2 e ate 1 salario minimo; ate 120 kWh a conta nao leva a CDE; o excedente e cobrado com a tarifa residencial normal; cita REN ANEEL 1.147/2025 e Lei 15.235/2025 (nao abertas)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Nao confirmado em fatura real. Nao verificado se o adicional de bandeira recebe desconto nesse beneficio; o modelo soma o adicional cheio. E um beneficio DIFERENTE da Tarifa Social (80 kWh gratuitos). Conferido nos Dados Abertos ANEEL (Componentes Tarifarias, ELETROPAULO, REH 3.596/2026): 'Desconto Social - faixa 01' = TUSD 316,88 + TE 316,78 = 633,66 R$/MWh; 'faixa 02' = Residencial (472,42 + 316,96)."
+    },
+    "franquia_desconto_social_kwh": {
+      "valor": 120,
+      "unidade": "kWh/mes ate os quais vale a tarifa Desconto Social",
+      "fonte": "REH 3.596/2026, Tabela 2, nota (2) (limite de 120 kWh) e pagina da Enel SP citada em tarifa_desconto_social_rs_kwh",
+      "data_consulta": "2026-11-11",
+      "estimativa": false
+    },
+    "regras_manter_beneficio": {
+      "valor": [
+        {
+          "id": "cadunico_atualizado",
+          "texto": "Cadastro Unico (ou BPC) atualizado: a falta de atualizacao por mais de dois anos pode resultar na perda do desconto.",
+          "acao": "Atualizar o cadastro no CRAS ou com a assistente social do bairro."
+        },
+        {
+          "id": "municipio_igual_conta",
+          "texto": "O municipio do CadUnico (ou do BPC) deve ser o mesmo em que esta registrada a conta de energia; se divergir, o beneficio pode ser bloqueado ate a regularizacao.",
+          "acao": "Atualizar o endereco no CadUnico, no CRAS, para o municipio da conta de energia."
+        },
+        {
+          "id": "titular_da_conta",
+          "texto": "O beneficiario da Tarifa Social deve ser o titular da conta de energia.",
+          "acao": "Pedir a troca de titularidade da conta na distribuidora."
+        }
+      ],
+      "unidade": "lista de regras (id, texto, acao) para manter a Tarifa Social; os ids sao as chaves de entrada da ferramenta verificar_beneficio_energia",
+      "fonte": "Pagina da Enel SP https://www.enel.com.br/pt-saopaulo/Para_Voce/Tarifa_Social_Baixa_Renda.html (capturas de tela do grupo, 11/11/2026: 'regras que passaram a valer em 2026': municipio do CadUnico/BPC igual ao da conta, beneficiario titular da conta, cadastro desatualizado ha mais de dois anos pode perder o desconto, procurar o CRAS) e pagina da ANEEL https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social (CadUnico atualizado nos ultimos 2 anos, endereco atualizado na area da distribuidora, uma unidade consumidora por familia)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Regras de 2026 conforme a Enel SP (fonte da distribuidora); nao conferi o ato normativo que as exige. A acao sugerida (CRAS, troca de titularidade) vem da pagina da Enel."
+    },
+    "pis_cofins_aliquota": {
+      "valor": 0.0545,
+      "unidade": "fracao (0 a 1): aliquota efetiva de PIS + Cofins sobre a conta de energia (varia todo mes)",
+      "fonte": "Fatura real da Enel SP (B1 Residencial, Sao Paulo capital, ref. out/2026, leitura 24/09 a 27/10/2026; enviada anonimizada pelo grupo, 13/11/2026): PIS 0,97% + Cofins 4,48% = 5,45%, base 41,71 (= TUSD 24,96 + TE 16,75, sem o adicional de bandeira). Referencia anterior: tabela mensal da Enel SP (https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-taxas-e-impostos.html), media fev/2025 a jan/2026 = 5,30%, faixa 4,40% a 6,08%.",
+      "data_consulta": "2026-11-13",
+      "estimativa": true,
+      "provisorio": true,
+      "nota": "Valor de UM unico mes (out/2026): a aliquota efetiva muda todo mes (a Enel explica que o PIS/Cofins e apurado de forma nao cumulativa, com creditos), por isso continua provisorio. Os meses de fev a nov/2026 nao estao na tabela enviada, e a aliquota efetiva muda todo mes (a Enel explica que o PIS/Cofins e apurado de forma nao cumulativa, com creditos). O cabecalho da tabela cita a REH 3.477/2025, de 2025, mas as linhas vao ate jan/2026. Regra da Enel: o calculo e 'por dentro' (PIS/Cofins fazem parte da propria base) e o PIS/Cofins NAO incide sobre o valor do ICMS, do ECE e da CIP; por isso o fator final e 1/((1 - ICMS) x (1 - PIS/Cofins)), e nao 1/(1 - soma). O exemplo numerico de https://canalsolar.com.br/en/incidencia-de-icms-no-pis-cofins-conta-de-energia (500 / (0,82 x 0,95) = 641,85) bate com essa forma. Conferir na fatura real."
+    },
+    "icms_faixas_residencial": {
+      "valor": [
+        {
+          "ate_kwh": 90,
+          "aliquota": 0.0
+        },
+        {
+          "ate_kwh": null,
+          "aliquota": 0.18
+        }
+      ],
+      "unidade": "lista de faixas {ate_kwh, aliquota}; ate_kwh nulo = sem limite; aliquota em fracao; a faixa e escolhida pelo consumo MENSAL TOTAL",
+      "fonte": "Isencao ate 90 kWh: Lei estadual (SP) 12.185/2006, art. 1o, 'consumo residencial de ate 90 (noventa) Kwh por mes' (https://www.al.sp.gov.br/repositorio/legislacao/lei/2006/lei-12185-05.01.2006.html; noticia da Alesp https://al.sp.gov.br/noticia/?id=275622); confirmado tambem numa fatura real da Enel SP (B1, out/2026, 50 kWh): 'ICMS isento conforme art. 29, inciso II, letra a, do Anexo I, Decreto 45.490/00'. Aliquota de 18% acima de 90 kWh: pagina 'Impostos e Outros Encargos' da Enel SP (https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-taxas-e-impostos.html; captura de tela do grupo, 12/11/2026), que lista Residencial 91 a 200 kWh = 12% e acima de 200 kWh = 18%.",
+      "data_consulta": "2026-11-15",
+      "estimativa": false,
+      "nota": "SIMPLIFICACAO (decisao do grupo, 15/11/2026): a pagina da Enel SP lista 3 faixas (isento ate 90 kWh; 12% de 91 a 200 kWh; 18% acima de 200 kWh), mas este modulo usa so 2 (isento ate 90 kWh; 18% acima de 90 kWh). O grupo decidiu nao modelar a faixa intermediaria de 12%: nao ha fatura real acima de 90 kWh para confirmar se ela incide so sobre os kWh dentro da faixa ou sobre o consumo inteiro, e nenhuma fonte aberta confirma a regra. Efeito: para consumos de 91 a 200 kWh o modulo calcula o ICMS pela aliquota de 18%, maior que os 12% da pagina da Enel; isso SUPERESTIMA o imposto (e, por isso, a conta) nessa faixa, o que e conservador para a economia estimada de eficiencia e solar (nao infla o beneficio). Premissa que permanece NAO verificada: a aliquota de 18% vale para TODO o consumo acima de 90 kWh, e nao so para os kWh acima de 90 (isenta so a faixa inicial); se for marginal, o modulo superestima ainda mais o ICMS acima de 90 kWh."
+    },
+    "bandeira_vigente": {
+      "valor": "verde",
+      "unidade": "cor da bandeira tarifaria do mes de referencia",
+      "fonte": "Dados Abertos da ANEEL, conjunto 'Bandeira tarifaria - acionamento' (arquivo bandeira-tarifaria-acionamento.csv enviado pelo grupo, gerado em 10/11/2026): out/2026 Verde, nov/2026 Verde (set/2026 Amarela; mai a set/2026 Amarela). Noticia anterior: ANEEL: bandeira verde em novembro/2026, anunciada em 30/10/2026 e noticiada por varios veiculos, ex.: https://sbtnews.sbt.com.br/noticia/economia/aneel-mantem-bandeira-verde-na-conta-de-luz-em-novembro . Pagina oficial da ANEEL, link citado pelo site Calculadora de Energia (nao consegui abrir): https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/aneel-anuncia-bandeira-verde-para-vigorar-em-novembro",
+      "data_consulta": "2026-11-14",
+      "estimativa": false,
+      "nota": "Muda todo mes. O chatbot deve receber a bandeira do mes como entrada (campo 'bandeira')."
+    },
+    "bandeiras_adicional_rs_kwh": {
+      "valor": {
+        "verde": 0.0,
+        "amarela": 0.01885,
+        "vermelha_p1": 0.04463,
+        "vermelha_p2": 0.07877
+      },
+      "unidade": "R$/kWh ANTES dos tributos (= adicional por 100 kWh dividido por 100)",
+      "fonte": "Dados Abertos da ANEEL, conjunto 'Bandeira tarifaria - adicional' (arquivo bandeira-tarifaria-adicional.csv enviado pelo grupo, gerado em 15/07/2026): REH 3.306/2024, vigencia 01/04/2024, Amarela 18,85, Vermelha P1 44,63, Vermelha P2 78,77 R$/MWh (= 0,01885; 0,04463; 0,07877 R$/kWh). Linha mais recente do arquivo; nao ha ato posterior ate a data de geracao. Fontes secundarias anteriores (print e valorfinal.com.br) coincidem.",
+      "data_consulta": "2026-11-14",
+      "estimativa": false,
+      "nota": "Primario ate 15/07/2026; nao verifiquei se houve ato novo depois disso, mas a fatura real da Enel SP de out/2026 e compativel com 0,01885 (ver abaixo). Valores antes dos tributos, na mesma base da tarifa_rs_kwh (sem tributos). O adicional tambem entra na base de ICMS, PIS e Cofins; o fator de tributos (PIS/Cofins e ICMS) e aplicado a soma tarifa + adicional. REH 3.596/2026, art. 3, par. 3: o valor do adicional e fixado pela ANEEL em ato especifico, que nao esta na REH; a pagina oficial da ANEEL lista os mesmos valores, sem resolucao nem vigencia (ver fonte). Em bandeira verde (nov/2026) o adicional e zero. Fatura real da Enel SP (out/2026, periodo com bandeiras amarela e verde): adicional de bandeira amarela R$ 0,17 para 50 kWh em 33 dias, compativel com 0,01885 R$/kWh aplicado a ~9 kWh (cerca de 6 dias de amarela; inferencia). A fatura cobra o adicional proporcional aos dias de cada bandeira e a linha aparece sem PIS/Cofins nem ICMS."
+    },
+    "fio_b_rs_kwh": {
+      "valor": 0.212077,
+      "unidade": "R$/kWh SEM tributos: parcela da TUSD B1 que a energia compensada deixa de abater a 100% (Fio B)",
+      "fonte": "Dados Abertos da ANEEL, conjunto 'Componentes Tarifarias' (CSV enviado pelo grupo, gerado em 14/11/2026; resource_id e8717aa8-2521-453f-bf16-fbb9a16eea39, agente ELETROPAULO, CNPJ 61695227000193): componente TUSD_FioB, B1 Residencial, Base Tarifaria = Tarifa de Aplicacao, vigencia 04/07/2026 a 03/07/2027 = 212,077381229 R$/MWh. Confere com o valor antes derivado da Tabela 4 da REH 3.596/2026 (472,42 x (1 - 0,7307) = 212,04 R$/MWh), diferenca de 0,02%.",
+      "data_consulta": "2026-11-14",
+      "estimativa": false,
+      "nota": "Valor oficial (Tarifa de Aplicacao da ANEEL), nao mais derivado. Fio B e parte da TUSD; este e o valor da classe Residencial (nao Baixa Renda nem Desconto Social), que e a que se aplica a maioria dos sistemas solares residenciais."
+    },
+    "fio_b_pct_nao_compensado": {
+      "valor": 0.6,
+      "unidade": "fracao do Fio B cobrada sobre a energia compensada (2026)",
+      "fonte": "Lei 14.300/2022, art. 27 (cronograma 15% em 2023, 30% em 2024, 45% em 2025, 60% em 2026). Conferido em https://canalsolar.com.br/consumidores-60-do-fio-b-2026/ (fonte secundaria; o texto legal nao abriu na consulta)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Vale para o regime GD II em 2026. Na REH 3.596/2026 (Tabela 4) o custo da energia compensada em 2027 (desconto de TUSD 66,33%) e 1,25 vez o de 2026 (73,07%), a razao 75/60 do cronograma da Lei 14.300; isso confirma de forma indireta o 60%. Incide so sobre o Fio B. ENQUADRAMENTO: pela REN 1.000/2021, arts. 655-O, 655-P e 655-Q (inseridos pela REN 1.059/2023; texto em https://www.legisweb.com.br/legislacao/?id=442297), GD I = solicitacao de orcamento ate 07/01/2023 (regra mais favoravel, vale ate 31/12/2045); GD III = minigeracao acima de 500 kW com condicoes de despacho e autoconsumo remoto/geracao compartilhada; GD II = os demais casos. Uma microgeracao residencial nova (solicitacao apos 07/01/2023) fica em GD II por exclusao. Leitura feita sobre pagina truncada em 100.000 de 121.937 caracteres: conferir os tres artigos no texto. A pagina https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida nao traz essa definicao nem os percentuais."
+    },
+    "franquia_tarifa_social_kwh": {
+      "valor": 80,
+      "unidade": "kWh/mes com desconto de 100% (Subclasse Residencial Baixa Renda)",
+      "fonte": "ANEEL, REH 3.596/2026, Tabela 3 (norma: Lei 12.212/2010 e REN 1.000/2021): B1 Residencial Baixa Renda, parcela do consumo mensal <= 80 kWh com 100% de desconto na TUSD e na TE; parcela > 80 kWh com 0%. Tambem: Lei 15.235/2025 (https://www.gov.br/mme/pt-br/acesso-a-informacao/legislacao/leis/lei-n-15-235-2025.pdf; texto nao oficial)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Acima de 80 kWh/mes o desconto e 0%. A pagina da ANEEL https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social confirma: 100% ate 80 kWh, parcela acima sem desconto, custo de disponibilidade tambem gratuito ate 80 kWh, e fatura que pode conter so as cobrancas nao associadas a energia (como ICMS e iluminacao publica). Elegibilidade (CadUnico atualizado nos ultimos 2 anos, renda ate meio salario minimo per capita, entre outras) nao modelada. Pagina da Enel SP (captura de tela do grupo, 11/11/2026): desde 2026 o municipio do CadUnico ou do BPC deve ser o mesmo da conta, e o beneficiario deve ser o titular da conta; o desconto e aplicado so sobre a tarifa de energia, e a Enel afirma que encargos, tributos e iluminacao publica continuam cobrados normalmente."
+    },
+    "custo_disponibilidade_kwh_por_ligacao": {
+      "valor": {
+        "monofasico": 30,
+        "bifasico_2_condutores": 30,
+        "bifasico_3_condutores": 50,
+        "trifasico": 100
+      },
+      "unidade": "kWh/mes minimos faturados (grupo B)",
+      "fonte": "ANEEL, Resolucao Normativa 1.000/2021, art. 291 (texto em https://www.legisweb.com.br/legislacao/?id=490988)",
+      "data_consulta": "2026-11-11",
+      "estimativa": false
+    },
+    "hsp_kwh_m2_dia": {
+      "valor": 4.657,
+      "unidade": "kWh/m2/dia, media anual, plano inclinado na latitude",
+      "fonte": "Arquivo tilted_latitude_means_SP.csv fornecido pelo grupo: media dos 4 pontos de grade mais proximos do centro de Sao Paulo-SP (IDs 5622, 5623, 5728, 5729), coluna ANNUAL = 4658, 4641, 4671, 4659 (media 4657,25). Citacao oficial do Atlas a confirmar",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Unidade presumida Wh/m2/dia (o cabecalho do arquivo nao informa). Municipio: Sao Paulo (capital), confirmado pelo grupo."
+    },
+    "taxa_desempenho": {
+      "valor": 0.7,
+      "unidade": "adimensional (0 a 1)",
+      "fonte": "Trecho fornecido pelo grupo, de manual de engenharia fotovoltaica: para SFCR residenciais bem ventilados e sem sombra, TD entre 70% e 80% 'pode ser obtida' nas condicoes de radiacao do Brasil; desempenho muito influenciado por temperatura e tecnologia. Fonte provavel: CRESESB/CEPEL, Manual de Engenharia para Sistemas Fotovoltaicos (Pinho e Galdino, 2014), cap. 6. Titulo, autores, ano e pagina A CONFIRMAR antes de citar",
+      "data_consulta": "2026-11-11",
+      "estimativa": true,
+      "nota": "Usado o piso da faixa (0,70) por prudencia: a faixa vale para instalacao boa, e telhados de baixa renda podem ter mais sombra e pior ventilacao. Sensibilidade: 0,70 a 0,80 muda a geracao em cerca de 14%."
+    },
+    "custo_rs_por_kwp": {
+      "valor": 2450,
+      "unidade": "R$ por kWp instalado (residencial, media nacional)",
+      "fonte": "Radar Solfacil, via Cenario Energia (09/06/2026): R$ 2,45/Wp, 1o trimestre de 2026. https://cenarioenergia.com.br/2026/06/09/preco-do-watt-pico-residencial-recua-7-em-um-ano-e-abre-janela-de-oportunidade-na-mmgd/",
+      "data_consulta": "2026-11-11",
+      "estimativa": true,
+      "nota": "Fonte secundaria, media nacional. Valores de R$ 3.400 a 5.500/kWp colados pelo grupo (Greener/ABSOLAR/EPE) nao foram confirmados em nenhuma fonte aberta. Testar sensibilidade e obter 3 orcamentos locais."
+    },
+    "fator_emissao_media_kgco2_kwh": {
+      "valor": 0.0461,
+      "unidade": "kg CO2/kWh (= tCO2/MWh), fator medio anual do SIN, 2025",
+      "fonte": "Planilha Inventario_2026_janset.xlsx fornecida pelo grupo (MCTI, aba inventario-todos): Fator Medio Anual de 2025 = 0,0461. Os meses jan-abr/2025 da planilha (0,0237; 0,0248; 0,0215; 0,0289) coincidem com os publicados por https://cenarioenergia.com.br/2025/06/13/brasil-reduz-intensidade-de-carbono-na-geracao-eletrica-com-inclusao-de-novas-renovaveis-na-base-de-calculo-oficial/. Confirmar link/citacao do MCTI",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "Ultimo ano completo. O fator anual de 2026 sai so no inicio de 2027; media simples dos meses jan-set/2026 da planilha = 0,0442 (conferencia)."
+    },
+    "fator_emissao_margem_operacao_kgco2_kwh": {
+      "valor": 0.4368,
+      "unidade": "kg CO2/kWh (= tCO2/MWh), margem de operacao (metodo marginal / MDL)",
+      "fonte": "Planilha 'Despacho 2026 jan-set' fornecida pelo grupo (aba MDL, Margem de Operacao, fator de emissao medio MENSAL 2026): media simples de jan a set = 0,4368. Confirmar link/citacao do MCTI",
+      "data_consulta": "2026-11-11",
+      "estimativa": false,
+      "nota": "LIMITE SUPERIOR. Metodo marginal: cerca de 10 vezes o fator medio anual de 2025 (0,0461). Usar so como sensibilidade, declarando o metodo."
+    }
+  }
+}
